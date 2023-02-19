@@ -6,7 +6,7 @@ router.get("/", function (req, res, next) {
   res.setHeader("Content-Type", "text/event-stream");
   res.setHeader("Cache-Control", "no-cache");
   let messageCount = 0;
-  const maxMessages = 10;
+  const maxMessages = Math.floor(Math.random() * 21) + 10;
   const dataGenerator = () => {
     const randomLength = Math.floor(Math.random() * 15) + 5;
     let randomData = "";
@@ -28,7 +28,7 @@ router.get("/", function (req, res, next) {
       clearInterval(intervalId);
       res.end();
     }
-  }, 1000);
+  }, 100);
 });
 
 module.exports = router;
