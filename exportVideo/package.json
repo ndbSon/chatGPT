@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "ffcreator": "^6.6.11",
+    "ffcreatorlite": "^2.3.11",
+    "mp3-duration": "^1.1.0"
+  }
+}
